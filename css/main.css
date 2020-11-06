@@ -18,9 +18,8 @@ h1{
     font-size: 100px;
 }
 body{margin: 0;top: 0;
-    background-repeat: no-repeat;
-    background-image: url("../image/FreeSoftwareFreeSociety-big.png");}
-
+    background-image: url("../image/gnu-dark-fsf-big.jpg");
+}
 .evil-topbar{
     background-color: #530707;
     height:60px;

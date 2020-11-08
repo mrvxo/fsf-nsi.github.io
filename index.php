@@ -20,10 +20,10 @@
   </head>
   <body>
     <header><?php include 'body/topbar.php' ?></header>
-    <div id="container">
+    <div id="all-container">
       <?php include 'pages/'.$page.'.php' ?>
     </div>
-    <footer><img src="/image/unnamed.png" width="100"> </img></footer>
+    <footer><?php include 'body/footer.php' ?></footer>
     <script src="js/jquery.js"></script>
     <?php $pages_js = scandir('js/');
       if(in_array($page.'.func.js',$pages_js)){

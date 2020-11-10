@@ -21,10 +21,15 @@
   <body>
     <header><?php include 'body/topbar.php' ?></header>
     <div id="all-container">
-      <?php include 'pages/'.$page.'.php' ?>
+      <div id="container">
+        <div id="middle-content">
+          <?php include 'pages/'.$page.'.php' ?>
+        </div>     
+        <div id="rightbar">
+          
+        </div>
+      </div>
     </div>
-    <footer><?php include 'body/footer.php' ?></footer>
-    <script src="js/jquery.js"></script>
     <?php $pages_js = scandir('js/');
       if(in_array($page.'.func.js',$pages_js)){
     ?>

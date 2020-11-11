@@ -1,13 +1,16 @@
 <?php
     include './config/main-function.php';
-
 	$pages = scandir("pages/");
 
 	if(isset($_GET['page']) && !empty($_GET['page']) && in_array($_GET['page'].'.php', $pages)){
 		$page = $_GET['page'];
-	}else{
-		$page = "home";
-	}
+    }else{ 
+        $page = "home";
+    }
+    $pages_functions = scandir("functions/");
+    if(in_array($page.'.func.php', $pages_functions)){
+      include 'functions/'.$page.'.func.php';
+    }
 
 ?>
 
@@ -26,7 +29,12 @@
           <?php include 'pages/'.$page.'.php' ?>
         </div>     
         <div id="rightbar">
-          
+          <div id="sponsor">
+              <img src="./image/unnamed.png">
+          </div><br><br>
+          <div id="sponsor">
+              <img src="./image/vooxo.png">
+          </div> 
         </div>
       </div>
     </div>

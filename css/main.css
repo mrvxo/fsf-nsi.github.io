@@ -2,7 +2,6 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../image/grid.png");
     background-color: #575d6c;
     height: 100%;
     display: grid;
@@ -111,5 +110,16 @@ button{
     color:#fff;cursor:pointer;font-size:16px;margin:5px 0;outline:none;
 }
 button:hover{height: 40px;background: rgba(0, 0, 0, 0.5);}
-#home { background: rgba(0, 0, 0, 0.5);}
-.post_regle{ width: 600px;}
+#home { background: url('../image/choose_races.png'); border-radius: 2px;}
+#warning{ width: 600px; font-family: "Retron"; }
+#sponsor{ background: url('../image/choose_races.png'); width: 100%; border-radius: 2px;
+        width: 250px; height: 250px;}
+        #sponsor img{
+            width: 200px;
+            height: 100%;
+            opacity: 0.75;
+        }
+.header{
+    display: block;
+    border-bottom: 2px solid #fff;
+}

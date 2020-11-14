@@ -1,16 +1,15 @@
 <div id="home">
-    <h1 class="header">S'enregister</h1>
+    <h1 class="header">Se connecter</h1>
     <form method="post" id="regForm">
     <div>
         <label class="field-label" for="email">Votre E-mail: <?= $_GET['email'] ?></label><br>
     </div>
     <div>
-        <label class="field-label" for="name">Pseudo: </label>
-        <input class="field-input" name="name" id="name" type="name"></input>
+        <label class="field-label" for="name">Mot de passe: </label>
+        <input class="field-input" name="passwd" id="passwd" type="passwd"></input>
     </div>
     <div>
-        <label class="field-label" id="warning">Pour une question de sécurité nous vous enverrons le mot de passe depuis votre boite mail !<br>
-        à chaque connexion de votre part. [Nous essaierons de respecter votre Anonymat à tout prix]</label>
+        <label class="field-label" id="warning">Allez voir vos mails</label>
     </div>
     <button type="submit" name="submit">S'enregistrer</b>
     </form>

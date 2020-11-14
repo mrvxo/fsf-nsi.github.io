@@ -3,6 +3,14 @@
         $email = htmlspecialchars(trim($_POST['email']));
         if(!empty($email)){
             if(emailFound($email) == 1){
+                ini_set( 'display_errors', 1 );
+                error_reporting( E_ALL );
+                $from = "you@example.com";
+                $subject = "Essai de PHP Mail";
+                $message = "PHP Mail fonctionne parfaitement";
+                $headers = "De :" . $from;
+                mail($email,$subject,$message, $headers);
+                echo "L'email a été envoyé.";
                 header('Location: index.php?page=login&email='.$email);
             }else{
                 header('Location: index.php?page=register&email='.$email);
@@ -13,7 +21,7 @@
 ?>
 <div id="home">
     <div class="post__content">
-        <h1>Identification</h1>
+        <h1 class="header">Identification</h1>
         <div class="post_annotation">
             <form method="post" id="Form">
                 <div class="field">
@@ -32,6 +40,7 @@
                         <br># 1) Respectez la vie privée des autres.
                         <br># 2) Réfléchissez avant de taper.
                         <br># 3) Une grande puissance s'accompagne d'une grande responsabilité.
+                        <br><?= random_bytes(5); ?>
             </div>
         </div>
     </div>

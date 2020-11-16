@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 3000
+RewriteRule ^(.*)$ https://git.localhost/$1 [R,L]

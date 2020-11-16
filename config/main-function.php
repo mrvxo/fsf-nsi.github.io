@@ -1,5 +1,5 @@
 <?php
-    $name = "GNU>> NSI";
+    $name = "FSF>> NSI";
 
     //Db configuration
     $db_host = "localhost";

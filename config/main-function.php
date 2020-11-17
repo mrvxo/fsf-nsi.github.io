@@ -5,7 +5,7 @@
     $db_host = "localhost";
     $db_name = "site";
     $db_user = "admin";
-    $db_pswd = "vooxo089";
+    $db_pswd = process.env.PASSWD_GNUNSI;
 
     try{
         $db = new PDO('mysql:host='.$db_host.';dbname='.$db_name,$db_user,$db_pswd, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));

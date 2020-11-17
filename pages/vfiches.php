@@ -1,11 +1,14 @@
-<div id="home">
-	<label>
-		<center><h1 class="header">Fiche de <?= test?></h1></center>
-	</label><br><br>
-	<div id="fiches-body">
+<div class="post__content">	
+	<div class="author">
+		<div class="post__title">Fiche de <?= test?></div>
+	</div>
+	<div id="post__info">
 		 <div>
-        	<label for="msg">Votre modification ?</label><br>
-        	<textarea id="msg" name="user_message"></textarea>
-   		</div>
+        	<label>Votre modification ?</label><br>
+        	<textarea name="user_message"></textarea>
+		</div>
+		<div>
+			<button type="submit">Envoie de votre ajout</button>
+		</div>
 	</div>
 </div>

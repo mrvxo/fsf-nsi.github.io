@@ -1,8 +1,9 @@
-<div id="home">
-	<h1 class="header">L'équipe de bg</h1>
-	
+<div class="post__content">	
 	<div class="author">
-		<div id ="author-title">Bilal "mrvxo" EMOHMADIAN</div>
+		<div class="post__title">Bilal "mrvxo"</div>
 	</div>
-
+	<div class="post__info">
+		<img src="./image/vooxo.png">
+		<p>Je suis un manchot et vous ?</p>
+	</div>
 </div>

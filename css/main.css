@@ -127,12 +127,34 @@ button:hover{height: 40px;background: rgba(0, 0, 0, 0.5);}
 
 .post__content{
 	width: 75%;
-	height: 25%
-	text-align:center;
-	border-radius: 2px;
+	height: 25%;
+	border-radius: 0 20px 0 20px;
 	background: url('../image/choose_races.png');
 	border: 2px solid #97adE3;
 }
-	#author-title{
-		font-family: "Orbitron";
+
+.post__info{
+	display: flex;
+	flex-direction: cell;
+	padding: 20px;
+	margin: 0 0 20px 0;
+}
+
+	.post__info img{
+		border-radius: 2px;
+		border: 2px solid #97adE3;
+		width: 150px;
 	}
+	.post__title{
+		font-family: "Orbitron";
+		text-align: center;
+		background-color: grey;
+		border-radius: 0 2px 2px 0;
+		border: 2px solid #97adE3;
+	}
+
+textarea{
+	resize: vertical;
+	width: 90%;
+	color: #000;
+}

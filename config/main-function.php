@@ -1,17 +1,18 @@
 <?php
-    $name = "FSF>> NSI";
-
-    //Db configuration
+	
+	//Website configuration:
+	$name = "FSF>> NSI";
+	$envFile = json_decode(file_get_contents("./setting.json"));
+	//Db configuration
     $db_host = "localhost";
     $db_name = "site";
     $db_user = "admin";
-    $db_pswd = process.env.PASSWD_GNUNSI;
-
-    try{
+	$db_pswd = $envFile->{'passwd-gnu'};
+	try{
         $db = new PDO('mysql:host='.$db_host.';dbname='.$db_name,$db_user,$db_pswd, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
-    }catch(PDOException $e){
-        die("Une erreur vient de surgir à la connexion à la base de donnée");
-    }
+    }catch(PDOException $e){	
+		die($db_pswd);
+	}
 
 
   	function emailFound($email){

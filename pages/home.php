@@ -33,9 +33,9 @@
                 </div>
                 <p class="error"><?php echo (isset($error_user_not_found)) ? $error_user_not_found : ''; ?></p>
             </form>
-            <div class="warning">
+			<div class="warning">
       	    	Nous espérons que vous avez reçu la conférence habituelle de l'administrateur système local.<br>
-        	     Cela se résume généralement à ces trois choses:
+        	    Cela se résume généralement à ces trois choses:
              	<br># 1) Respectez la vie privée des autres.
              	<br># 2) Réfléchissez avant de taper.
              	<br># 3) Une grande puissance s'accompagne d'une grande responsabilité.

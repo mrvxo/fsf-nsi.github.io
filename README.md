@@ -3,7 +3,7 @@ Website create by
 
 **Create a setting.json**
 ```
-implements you're login inthsi file liek this
+implements you're login in this file like this
 {
   "passwd_gnu": "your_mdp",
   "db_host": "your_host",

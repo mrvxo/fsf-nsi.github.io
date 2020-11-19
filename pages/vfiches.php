@@ -3,10 +3,8 @@
 		<div class="post__title">Fiche de <?= test?></div>
 	</div>
 	<div id="post__info">
-		 <div>
-        	<label>Votre modification ?</label><br>
-        	<textarea name="user_message"></textarea>
-		</div>
+       	<label>Votre modification ?</label><br>
+        <textarea name="user_message"></textarea>
 		<div>
 			<button type="submit">Envoie de votre ajout</button>
 		</div>

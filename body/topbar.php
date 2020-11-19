@@ -2,7 +2,7 @@
 	<a class="evil-title" href="index.php"><?= $name ?></a>
 	<div class="collapse navbar-collapse" id="navbarSupportedContent" style="top:0 !important;background:none;">
 		<ul class="navbar-nav mr-auto usermenu0">
-			<li class="evil-menu"><a class="" href="">Fiches-Notes</a></li>
+			<li class="evil-menu"><a class="" href="index.php?page=menu-fiche">Fiches-Notes</a></li>
 			<li class="evil-menu"><a class="" href="index.php?page=lesbg">Les bgs</a></li>
 		</ul>
 	</div>

@@ -2,12 +2,12 @@
 	
 	//Website configuration:
 	$name = "FSF>> NSI";
-	$envFile = json_decode(file_get_contents("./setting.json"));
+	$envFile = json_decode(file_get_contents("/home/pi/setting.json"));
 	//Db configuration
-    $db_host = "localhost";
-    $db_name = "site";
-    $db_user = "admin";
-	$db_pswd = $envFile->{'passwd-gnu'};
+    $db_host = $envFile->{'db_host'};
+    $db_name = $envFile->{'db_name'};
+    $db_user = $envFile->{'db_user'};
+	$db_pswd = $envFile->{'passwd_gnu'};
 	try{
         $db = new PDO('mysql:host='.$db_host.';dbname='.$db_name,$db_user,$db_pswd, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
     }catch(PDOException $e){	

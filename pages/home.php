@@ -20,24 +20,26 @@
        
 ?>
 <div class="post__content">
-	<h1 class="header">Identification</h1>
+	<h1 class="header">Principe du Copylefts</h1>
     	<div class="post_annotation">
-            <form method="post">
-					<div id="Form">
-                    	<img src="./image/The_GNU_logo.png" width="100" height="100">
-						<label for="email">Votre E-mail</label>
-                       	<input type="email" name="email" id="email"/>
-						<button  type="submit" name="submit">S'identifier</b>
-                    </div> 
-                <p class="error"><?php echo (isset($error_user_not_found)) ? $error_user_not_found : ''; ?></p>
-            </form>
 			<div class="warning">
-      	    	Nous espérons que vous avez reçu la conférence habituelle de l'administrateur système local.<br>
-        	    Cela se résume généralement à ces trois choses:
-             	<br># 1) Respectez la vie privée des autres.
-             	<br># 2) Réfléchissez avant de taper.
-             	<br># 3) Une grande puissance s'accompagne d'une grande responsabilité.
-             	<br> <span class="copy-left">©</span>. Libre pour tous.
-   		</div>
+            (0) exécuter le programme,<br>
+            (1) étudier et modifier le programme sous forme de code source,<br>
+            (2) en redistribuer des copies exactes,<br>
+            (3) en redistribuer des versions modifiées.
+   	    </div>
 	</div>
+</div><br><br>
+<div class="post__content">
+	<h1 class="header">Identification</h1>
+    <form method="post">
+        <div id="Form">
+            <label for="email">Votre E-mail</label>
+            <input type="email" name="email" id="email"/>
+            <button  type="submit" name="submit">S'identifier</b>
+        </div> 
+        <p class="error"><?php echo (isset($error_user_not_found)) ? $error_user_not_found : ''; ?></p>
+    </form>
 </div>
+
+

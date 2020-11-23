@@ -1,3 +1,4 @@
+<div id="home"<div class="post__content">
 <div class="post__info">
 	<div class="ARBRE"><center>
 		<ul><li>
@@ -19,4 +20,4 @@
 			</li></ul>
 		</li></ul>
 	</center></div>
-</div>
+</div></div</dib>

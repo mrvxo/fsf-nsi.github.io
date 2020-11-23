@@ -1,8 +1,8 @@
-*{  color: white; padding: 0; margin: 0; }
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+*{  color: white; padding: 0; margin: 0; font-family: 'Noto Sans KR', sans-serif;}
+html {height: 100%;}
 body{
-    margin: 0;
-    padding: 0;
-    background-color: black;
+    background-color: #111111;
     height: 100%;
     display: grid;
     grid-template-columns: auto auto 200px;
@@ -17,22 +17,15 @@ header{display: block;grid-area: header;}
 #all-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-grow: 1;
     width: 100%;
+    height: 100%;
     grid-area: main;
-    padding: 20px;
-    margin: 0 0 20px 0;
-    border-radius: 5px 5px 25px 5px;
-    position: relative;
 }
 
 #container {
-    overflow: hidden;
     display: table;
-    margin: 20%;
-    width: 80%;
-    min-height:100%;
-    margin:0 auto;
+    width: 100%;
 }
 
 #middle-content{
@@ -51,39 +44,24 @@ header{display: block;grid-area: header;}
     align-items: center;
     overflow: hidden;
 }
+
 h1{font-size: 25px;}
 
 
 .evil-topbar{
-    background: linear-gradient(-90deg, #43cea2, #185a9d) !important;
-    position: relative;
-    display: -ms-flexbox;
+    background: linear-gradient(-90deg, #872D62, #440028) !important;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    flex-shrink: 0;
 }
 
-.evil-title{
-    color:inherit;
-    text-decoration:none;
+.evil-title img{
+    fill: #3d3d3d;
+    width: 2.5em;
     font-size: auto;
     font-weight:500;
     font-size: 30px;
-    font-family: Retron;
-}
-
-a, li { text-decoration: none; list-style: none; list-style-type: none;}
-
-ol, ul, dl {
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
 }
 
 .evil-menu{
@@ -97,17 +75,26 @@ ol, ul, dl {
     display: block;
 }
 
+a, li { text-decoration: none; list-style: none; list-style-type: none;}
+
+ol, ul, dl {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+
 button{
     background: none; border: none; display:block;width: 50%;height: 50px;
     color:#fff;cursor:pointer;font-size:16px;margin:5px 0;outline:none;
 }
 button:hover{height: 40px;background: rgba(0, 0, 0, 0.5);}
-#home { border: 2px solid #97ade3;}
+#home { border: 2px solid #e39797;}
 #warning{ width: 600px; font-family: "Retron"; }
 #sponsor{ background: url('../image/choose_races.png'); 
 		width: 100%; 
         width: 250px; height: 250px;
-		border:2px solid #97ade3;
+		border:2px solid #e39797;
 		}
         #sponsor img{
             width: 200px;
@@ -117,24 +104,36 @@ button:hover{height: 40px;background: rgba(0, 0, 0, 0.5);}
 .copy-left { display: inline-block; text-align: right; margin: 0px; -moz-transform: scaleX(-1); 
 	-o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH"; }
 
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Commissioner', cursive;
+    background-color: #110011;
+    padding: 10px;
+    align-items: center;
+}
+    footer a{
+        background-color: #440028;
+        padding: 5px;
+    }
+
 .post__content{
-	width: 75%;
 	height: 25%;
 	border-radius: 0 20px 0 20px;
 	background: url('../image/choose_races.png');
-	border: 2px solid #97adE3;
+	border: 2px solid #e39797;
 }
 
 .post__info{
 	display: flex;
 	flex-direction: cell;
 	padding: 20px;
-	margin: 0 0 20px 0;
 }
 
 	.post__info img{
 		border-radius: 2px;
-		border: 2px solid #97adE3;
+		border: 2px solid #e39797;
 		width: 150px;
 	}
 	.post__title{
@@ -142,7 +141,7 @@ button:hover{height: 40px;background: rgba(0, 0, 0, 0.5);}
 		text-align: center;
 		background-color: grey;
 		border-radius: 0 2px 2px 0;
-		border: 2px solid #97adE3;
+		border: 2px solid #e39797;
 	}
 
 	.post__info textarea{
@@ -158,7 +157,18 @@ button:hover{height: 40px;background: rgba(0, 0, 0, 0.5);}
 		height: 30px;
 	}
 
-.ARBRE button:hover{
-	background-color: rgba(255,255,255, 0.5);
-	width:100%;
-}
+
+	.ARBRE ul ul ul{
+		text-align:center;
+	}
+	.ARBRE {
+		color: red;
+	}
+	.ARBRE button:hover{
+		background-color: rgba(255,255,255, 0.5);
+		width:100%;
+		text-align: center;
+	}
+	.ARBRE li{
+		padding: 10px;
+	}

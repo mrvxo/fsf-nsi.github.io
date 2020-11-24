@@ -25,7 +25,6 @@ header{display: block;grid-area: header;}
 
 #container {
     display: table;
-    width: 100%;
 }
 
 #middle-content{
@@ -157,18 +156,6 @@ footer {
 		height: 30px;
 	}
 
-
-	.ARBRE ul ul ul{
-		text-align:center;
-	}
-	.ARBRE {
-		color: red;
-	}
-	.ARBRE button:hover{
-		background-color: rgba(255,255,255, 0.5);
-		width:100%;
-		text-align: center;
-	}
-	.ARBRE li{
-		padding: 10px;
-	}
+    .ARBRE table{
+        align-items: center;
+    }

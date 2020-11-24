@@ -1,23 +1,40 @@
-<div id="home"<div class="post__content">
-<div class="post__info">
-	<div class="ARBRE"><center>
-		<ul><li>
-			<button><a href="#">Les cours</a></button>
-			<ul><li>
-			<?php  while($c = $Mat->fetch()){
-				$Chapter->execute(array($c['id']))	
-			?>
-				<li>
-					<button><a href="#"><?= $c['name']?></a></button>
-					<ul><?php while($chap = $Chapter->fetch()){ ?>
-						<li>
-							<button><a href="#"><?= $chap['chapter']?></a></button>
-						</li>
+
+<div class="ARBRE">
+	<table>
+		<thead>
+			<svg>
+				<circle  cx="50%" cy="50%" r="70"/>
+				<text x="50%" y="50%" stroke="#872D62" text-anchor="middle" stroke-width="2px" dy=".3em">Première</text>	
+			</svg>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+
+					<?php  while($c = $Mat->fetch()){
+						$Chapter->execute(array($c['id']))	
+					?>	
+					<td>
+						<svg>
+							<circle  cx="50%" cy="50%" r="70"/>
+							<text x="50%" y="50%" stroke="#872D62" text-anchor="middle" stroke-width="2px" dy=".3em"><?= $c['name'] ?></text>	
+						</svg>
+						<table>
+							<tbody>
+							<?php while($chap = $Chapter->fetch()){ ?>
+								<tr>
+								<svg>
+									<circle  cx="50%" cy="50%" r="70"/>
+									<text x="50%" y="50%" stroke="#872D62" text-anchor="middle" stroke-width="2px" dy=".3em"><?= $chap['chapter'] ?></text>	
+								</svg>
+								<tr>
+							<?php } ?>
+							</tbody>
+						</table>
+					</td>
 					<?php } ?>
-					</ul>
-				</li>	
-			<?php }  ?>
-			</li></ul>
-		</li></ul>
-	</center></div>
-</div></div</dib>
+				<td>
+			</tr>
+		</tbody>
+	</table>
+</div>

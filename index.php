@@ -16,14 +16,14 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <title><?= $name ?></title>
-    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./image/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="./css/main.css" media="screen" />
-    <link href="https://fonts.googleapis.com/css2?family=Overpass&family=Commissioner&family=Staatliches&display=swap" rel="stylesheet"> 
-  </head>
+	<head>
+    	<meta charset="UTF-8">
+		<title><?= $name ?></title>
+		<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="./image/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="./css/main.css" media="screen" />
+		<link href="https://fonts.googleapis.com/css2?family=Overpass&family=Commissioner&family=Staatliches&display=swap" rel="stylesheet">
+	</head>
   <body> 
     <header><?php include 'body/topbar.php' ?></header>
 		<div id="all-container">
@@ -40,9 +40,9 @@
           </div> 
         </div>
         <?php }  ?>
-   		</div>
+		</div>
     </div>
-    <!-- Ajout du js-->
+	<!-- Ajout du js-->
     <?php $pages_js = scandir('js/');
       if(in_array($page.'.func.js',$pages_js)){
     ?>
@@ -50,7 +50,6 @@
     <?php
         }
     ?>
-
     <footer><?php include 'body/footer.php' ?></footer>
   </body>
 </html>

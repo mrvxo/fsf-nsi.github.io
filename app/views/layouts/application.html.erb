@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Qtzctl | Groupe d'aide</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+			<ul>	
+				<li><a id="trigger_popup_fricc" href="#">
+					<span style="font-size: 30px; color: Dodgerblue;">
+						<i class="fas fa-th"></i>
+					</span></a></li>
+				<li><a id="topbar-right" href="#register">LogRegister</a></li>
+			</ul>
+			<div id="popup">
+				<table>
+					<tbody>
+						<tr><td>
+							<span style="font-size: auto; color: Tomato;">
+								<i class="fas fa-cogs"></i>
+							</span></td>
+							<td><span style="font-size: auto; color: Dodgerblue;">
+								<a href="./afoolish-os/"><i class="fab fa-android"></i></a>
+							</span></td>
+							<td><span style="font-size: auto;">
+								<i class="fas fa-cloud-upload-alt"></i>
+							</span></td>
+							<td><span style="font-size: auto;">
+								<a href="./index.php"><i class="fas fa-search"></i></a>
+							</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<script>
+				var btnPopup = document.getElementById('trigger_popup_fricc');
+				var overlay = document.getElementById('popup');
+				var openPopup = false;
+				btnPopup.addEventListener('click',()  => {
+					if(!openPopup){overlay.style.display = 'block';openPopup = true;
+					}else{overlay.style.display ="none"; openPopup = false;}
+				});
+			</script>
+		</header>
+      <%= yield %>
+    <footer>
+			<p>Le <a href="https://github.com/mrvxo/fsf-nsi.github.io">code source</a> de ce site est disponible sur GitHub </p>
+			<span style="font-size: 2rem;">
+				<i class="fab fa-creative-commons"></i>
+				<i class="fab fa-creative-commons-by"></i>
+				<i class="fab fa-creative-commons-sa"></i>
+			</span>
+		</footer>
+
+  </body>
+</html>

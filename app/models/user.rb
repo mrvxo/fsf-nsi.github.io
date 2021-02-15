@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_secure_password
+  has_secure_token :confirmation_token
+  has_secure_token :password
   validates :username, 
     format: {
      with: /\A[a-zA-Z0-9_]{2,20}\z/, 

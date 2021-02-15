@@ -5,7 +5,12 @@
     <% end %>
   <% end %>
 
+  <% if flash[:danger] %>
+    <%=  flash[:danger] %>
+  <% end %>
+
   <div id="Form">
+    <h1>Authentification</h1>
     <%= form_for @user do |f| %>
       <div>
         <%= f.label :username, "Pseudonyme: " %>
@@ -15,11 +20,10 @@
         <%= f.label :email, "Votre E-mail: " %>
         <%= f.email_field :email %>
       </div>
-      <div>
-        <%= f.label :password,  "Mot de passe: " %>
-        <%= f.password_field :password %>
-      </div>
       <button type="submit">S'inscrire</button>
     <% end %>
   </div>
+  <% if flash[:success] %>
+    <%= flash[:success] %>
+  <% end %>
 </main>

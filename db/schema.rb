@@ -12,12 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_02_15_081007) do
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "username"
     t.string "email"
     t.boolean "confirmed", default: false
     t.string "confirmation_token"
-    t.string "password_digest"
+    t.string "password"
     t.boolean "avatar", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

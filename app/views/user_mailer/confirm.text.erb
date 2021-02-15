@@ -1,0 +1,11 @@
+Bonjour, <%= @user.username %>.
+
+Vous avez rejoins la ligue des serpents à plumes pour permettre
+une plus grande décentralisation des connaissances !
+
+<%= confirm_user_url(id: @user.id, token: @user.confirmation_token) %>
+
+Votre mdp de connexion : <%= @user.password %>
+
+
+

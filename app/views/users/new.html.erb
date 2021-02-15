@@ -1,3 +1,25 @@
-<%= form_for @user do |f| %>
- <%= f.text_field :username %>
-<% end %>
+<main>
+  <% if @user.errors.any?%>
+    <% @user.errors.full_messages.each do |message| %>
+      <div id="warning"><%= message %></div>
+    <% end %>
+  <% end %>
+
+  <div id="Form">
+    <%= form_for @user do |f| %>
+      <div>
+        <%= f.label :username, "Pseudonyme: " %>
+        <%= f.text_field :username %>
+      </div>
+      <div>
+        <%= f.label :email, "Votre E-mail: " %>
+        <%= f.email_field :email %>
+      </div>
+      <div>
+        <%= f.label :password,  "Mot de passe: " %>
+        <%= f.password_field :password %>
+      </div>
+      <button type="submit">S'inscrire</button>
+    <% end %>
+  </div>
+</main>

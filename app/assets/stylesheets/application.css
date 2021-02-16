@@ -1,5 +1,5 @@
 *{  color: white; padding: 0; margin: 0; font-family: 'Noto Sans KR', sans-serif;}
-html {height: 100%;  background: radial-gradient(circle at bottom, navy 0, black 100%); overflow: hidden} 
+html {height: 100%;  background: radial-gradient(circle at bottom, navy 0, black 100%); overflow: hidden;} 
 body{
   background: rgba(128, 0, 128, 0.1) center / 200px 200px round;	
 	display: grid;
@@ -11,9 +11,9 @@ body{
 div {box-sizing: border-box; padding: 10px;}
 header{display: block;grid-area: header; text-align: center;}
 main{
+		align-items: center;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		width: 100%;
 		grid-area: main;
 }
@@ -25,13 +25,17 @@ main{
 		line-height: 40px;
 		float: right;	
 	}
-h1{font-size: 25px;}
+
+.header{
+    display: block;
+    border-bottom: 2px solid #ccc;
+}
 a, li { text-decoration: none; list-style: none; list-style-type: none;}
 ol, ul, dl {
-		display: -ms-flexbox !important;
-		display: flex !important;
-		-ms-flex-preferred-size: auto;
-		flex-basis: auto;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-ms-flex-preferred-size: auto;
+	flex-basis: auto;
 }
 button{
 	background: none; border: none; display:inline-block; height: 50px;
@@ -72,6 +76,10 @@ input {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
+/*
+ * Pop-up du menu 
+ */
+
 #popup{
 	display: none;
 	margin: 10px;
@@ -89,6 +97,7 @@ input {
 		grid-template-columns: repeat(3, 1fr);
 	}
 a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
+
 #Form{
 	bottom: 0;
 	margin: 0;
@@ -98,43 +107,39 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 	position: fixed;
 }
 
-.ARBRE{
-		align-items: center;
-}
+/*
+ *	Grid de l'accueil
+ */
 
 #grid {
 	background-color: #111;
-	width: 100%;
-	height: 100%;
-	border-radius: 50% 0 50% 0;
-	color: #111;
+	width: 700px;
+	height: 500px;
+	border-radius: 30% 0 30% 0;
+	align-items: center;
 }
-
-#losange{
-	padding: 0;
-	width: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 100px solid #fff;
-	position: relative;
-}
-#losange:before{
-	content:'';
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-top: 45px solid #ccc;
-	padding: 0;
-	width: 0;
-	position: absolute;
-	top:100px;
-	left:-50px;
-}
-	#losange-title{
-		padding-top: 50px;
-		color: white;
-		font-size: 40px;
+	#grid .header, #grid table{
+		position: relative;
 	}
-
+	#grid #losange{
+		padding: 0;
+		width: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 100px solid #fff;
+		position: relative;
+	}
+	#grid #losange:before{
+		content:'';
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 45px solid #ccc;
+		padding: 0;
+		width: 0;
+		position: absolute;
+		top:100px;
+		left:-50px;
+	}
 a,p,h1,h2,h3,h4,h5,h6,b,u{color:inherit;}
 
 /*

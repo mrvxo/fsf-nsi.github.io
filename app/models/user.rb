@@ -12,4 +12,17 @@ class User < ApplicationRecord
     },
     uniqueness: {case_sensitive: false}
 
+  def to_session
+    {id: id}
+  end
+
+  def generate_password
+    self.password = generate_token
+    save!
+  end
+
+  def generate_token
+    SecureRandom.hex(10)
+  end
+
 end

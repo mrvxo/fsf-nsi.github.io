@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/profil', to:  'users#edit', as: :profil
   patch '/profil', to: 'users#update'
-
+  
   resources :lib_core, only: [:add, :edit, :matiere, :chapter]
   resources :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create, :edit] do 

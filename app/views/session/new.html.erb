@@ -1,2 +1,25 @@
-<h1>Session#new</h1>
-<p>Find me in app/views/session/new.html.erb</p>
+<main>
+
+  <% if flash[:danger] %>
+    <div class="alert">
+      <%=  flash[:danger] %>
+    </div>
+  <% end %>
+
+  <center>
+    <h1 class="header">Connexion</h1>
+    <div id="div_connect">
+      <%= form_for :user, url: session_index_path, html: {id: 'form_user'}  do |f| %>
+        <div>
+          <%= f.email_field :email, placeholder: 'Email'%>
+        </div>
+        <% if flash[:success] %>
+          <div>
+          <%= f.password_field :password, placeholder: 'Mot de passe' %>
+          </div>
+        <% end %>
+        <div><input class="button blue" type="submit" value="M'identifier"></div>
+      <% end %>
+    </div>
+  </center>
+</main>

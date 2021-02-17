@@ -1,5 +1,10 @@
 *{  color: white; padding: 0; margin: 0; font-family: 'Noto Sans KR', sans-serif;}
+a,p,h1,h2,h3,h4,h5,h6,b,u{color:inherit;}
+a, li { text-decoration: none; list-style: none; list-style-type: none;}
 html {height: 100%;  background: radial-gradient(circle at bottom, navy 0, black 100%); overflow: hidden;} 
+div{
+	box-sizing: border-box;
+}
 body{
   background: rgba(128, 0, 128, 0.1) center / 200px 200px round;	
 	display: grid;
@@ -8,7 +13,6 @@ body{
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas: "header header header" "main main main" "footer footer footer";
 }
-div {box-sizing: border-box; padding: 10px;}
 header{display: block;grid-area: header; text-align: center;}
 main{
 		align-items: center;
@@ -17,43 +21,16 @@ main{
 		width: 100%;
 		grid-area: main;
 }
-	#topbar-right{
-		border-radius: 20px;
-		font-size: 18px;
-		font-weight: 400;
-		padding: 0 10px;
-		line-height: 40px;
-		float: right;	
-	}
-
 .header{
     display: block;
     border-bottom: 2px solid #ccc;
 }
-a, li { text-decoration: none; list-style: none; list-style-type: none;}
 ol, ul, dl {
 	display: -ms-flexbox !important;
 	display: flex !important;
 	-ms-flex-preferred-size: auto;
 	flex-basis: auto;
 }
-button{
-	background: none; border: none; display:inline-block; height: 50px;
-	cursor:pointer;font-size:16px;margin:5px 0;outline:none;
-	width:48%;
-}
-button:hover{height: 40px;background: rgba(0, 0, 0, 0.5);}
-#home { border: 2px solid #6E1423;}
-#warning{  font-family: "Retron";  background-color: #A50;}
-#sponsor{ background: url('../image/choose_races.png'); 
-		width: 100%; width: 250px; height: 250px;
-		border:2px solid #e39797;
-		}
-				#sponsor img{
-						width: 200px;
-						height: 100%;
-						opacity: 0.75;
-		}
 footer {
 		grid-area: footer;
 		display: flex;
@@ -61,21 +38,11 @@ footer {
 		font-family: 'Commissioner', cursive;
 		padding: 10px;
 		align-items: center;
+}footer a{
+	padding: 5px;
+	background-color: #550012;
 }
-	footer a{
-		padding: 5px;
-		background-color: #550012;
-	}
-input {
-	color: black;
-	height: 25px;
-	width: 500px;
-	background-color: rgba(255,255,255, 1);
-	border-radius: 10px;
-	border-color: #220000;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
+
 /*
  * Pop-up du menu 
  */
@@ -140,46 +107,51 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 		top:100px;
 		left:-50px;
 	}
-a,p,h1,h2,h3,h4,h5,h6,b,u{color:inherit;}
-
-/*
- *VERSION MOBILE
- */
-
-@media (max-width: 640px) {
-	body{
-		height: 100%;
-	}
-	#grid{height: 300px;}
-	@font-face{font-family: Retron; src: url("../fonts/Retron2000.ttf");}
-	@font-face{font-family: Orbitron; src: url("../fonts/Orbitron-Regular.ttf");}
-	header{display: block; text-align: center;}
-	main{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: auto;
-	}
-	footer {
-		display: flex;
-		flex-direction: column;
-		font-family: 'Commissioner', cursive;
-		padding: 10px;
-		align-items: center;
-	}
-		footer a{
-				padding: 5px;
-		}
-	
-	input {
-		color: black;
-		height: 25px;
-		width: 250px;
-		background-color: rgba(255,255,255, 1);
-		border-radius: 10px;
-		border-color: #220000;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-	}
+.button.blue {
+	background-color: #058;
+	height: 35px;
 }
 
+.button {
+	color: #FFFFFF;
+	box-shadow: 0px 20px 20px 0px rgba(255, 255, 255, 0.1) inset, 0px 2px 3px 1px rgba(0,0,0,0.3);	
+	box-shadow: 0 0px 0 1px rgba(255,255,255,0.2), 0 3px 12px 1px rgba(0,0,0,0.85);
+	border: none;
+}
+
+
+#form_user {
+	display: block;
+	font-size: 16px;
+	width: 230px;
+}
+
+
+#form_user div {
+	position: relative;
+	margin: 15px 0 0 0;
+}
+
+
+
+#form_user .button {
+	font-size: 15px;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+#form_user input {
+	font-size: 15px;
+	padding: 0px 7px 0px 30px;
+	width: 100%;
+	box-sizing: border-box;
+	line-height: 35px;
+	height: 35px;
+	color: black;
+}
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}

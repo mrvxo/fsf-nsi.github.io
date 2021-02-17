@@ -9,21 +9,23 @@
     <%=  flash[:danger] %>
   <% end %>
 
-  <div id="Form">
-    <h1>Authentification</h1>
-    <%= form_for @user do |f| %>
-      <div>
-        <%= f.label :username, "Pseudonyme: " %>
-        <%= f.text_field :username %>
-      </div>
-      <div>
-        <%= f.label :email, "Votre E-mail: " %>
-        <%= f.email_field :email %>
-      </div>
-      <button type="submit">S'inscrire</button>
-    <% end %>
-  </div>
+  <center>
+    <h1 class="header">Inscription</h1>
+    <div id="div_connect">
+      <%= form_for @user, html: {id:'form_user'} do |f| %>
+        <div>
+          <%= f.text_field :username, placeholder: 'Pseudonyme' %>
+        </div>
+        <div>
+          <%= f.email_field :email, placeholder: 'Email'%>
+        </div>
+        <div><input class="button blue" type="submit" value="M'identifier"></div>
+      <% end %>
+    </div>
+  </center>
+
+
   <% if flash[:success] %>
     <%= flash[:success] %>
-  <% end %>
+  <% end %>	
 </main>

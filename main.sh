@@ -1,3 +1,4 @@
-#!bin/sh
+#!bin/bash
 cd /home/pi/Documents/qtzctl/
-sudo rails s -b 192.168.1.104 -p 80 -e production
+source ~/.bashrc
+rails s -b 192.168.1.104 -p 80 -e production

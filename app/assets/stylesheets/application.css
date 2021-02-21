@@ -78,37 +78,13 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
  *	Grid de l'accueil
  */
 
-#grid {
-	background-color: #111;
-	width: 700px;
-	height: 500px;
-	border-radius: 30% 0 30% 0;
-	align-items: center;
-}
-	#grid .header, #grid table{
-		position: relative;
-	}
-	#grid #losange{
-		padding: 0;
-		width: 0;
-		border-left: 50px solid transparent;
-		border-right: 50px solid transparent;
-		border-bottom: 100px solid #fff;
-		position: relative;
-	}
-	#grid #losange:before{
-		content:'';
-		border-left: 50px solid transparent;
-		border-right: 50px solid transparent;
-		border-top: 45px solid #ccc;
-		padding: 0;
-		width: 0;
-		position: absolute;
-		top:100px;
-		left:-50px;
-	}
 .button.blue {
 	background-color: #058;
+	height: 35px;
+}
+
+.button.black {
+	background-color: #111;
 	height: 35px;
 }
 
@@ -118,7 +94,6 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 	box-shadow: 0 0px 0 1px rgba(255,255,255,0.2), 0 3px 12px 1px rgba(0,0,0,0.85);
 	border: none;
 }
-
 
 #form_user {
 	display: block;
@@ -131,8 +106,6 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 	position: relative;
 	margin: 15px 0 0 0;
 }
-
-
 
 #form_user .button {
 	font-size: 15px;
@@ -149,9 +122,65 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 	height: 35px;
 	color: black;
 }
+
 .alert {
   padding: 20px;
   background-color: #f44336; /* Red */
   color: white;
   margin-bottom: 15px;
 }
+
+.search-engine{
+	width: 700px;
+}	
+	.search-engine input{
+		font-size: 15px;
+		padding: 0px 7px 0px 30px;
+		width: 100%;
+		box-sizing: border-box;
+		line-height: 35px;
+		height: 35px;
+		color: black;
+		margin-bottom: 10px;
+	}
+	.search-engine.input input{
+		color: white;
+		padding: 0px;
+		width: 347px;
+	}
+
+#grid {
+	background-color: #111;
+	width: 700px;
+	height: 500px;
+	border-radius: 30% 0 30% 0;
+	align-items: center;
+}
+	#grid .header, #grid table{
+		position: relative;
+	}
+	#grid #losange{
+		margin: 20px;
+		padding: 0;
+		width: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 100px solid #fff;
+		position: relative;
+	}
+	#grid .header{
+		margin: 0 10px 0 10px;
+	}
+	#grid #losange:before{
+		content:'';
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 45px solid #ccc;
+		padding: 0;
+		width: 0;
+		position: absolute;
+		top:100px;
+		left:-50px;
+	}
+
+

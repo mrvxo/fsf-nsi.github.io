@@ -205,6 +205,7 @@ PLATFORMS
   arm-linux
 
 DEPENDENCIES
+  actionpack (>= 6.1.2.1)
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   byebug
@@ -228,4 +229,4 @@ RUBY VERSION
    ruby 2.5.5p157
 
 BUNDLED WITH
-   2.2.9
+   2.2.16

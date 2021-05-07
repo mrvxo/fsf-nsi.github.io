@@ -1,63 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Qtzctl | Groupe d'aide</title>
+  <title><%= Rails.application.config.site[:name] %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css" integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/solid.min.css" integrity="sha512-xIEmv/u9DeZZRfvRS06QVP2C97Hs5i0ePXDooLa5ZPla3jOgPT/w6CzoSMPuRiumP7A/xhnUBxRmgWWwU26ZeQ==" crossorigin="anonymous" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header>
-			<ul>	
-				<li><a id="trigger_popup_fricc" href="#">
-					<span style="font-size: 30px; color: Dodgerblue;">
-						<i class="fas fa-th"></i>
-					</span></a></li>
-          <li><a id="topbar-right" href="<%= new_user_path  %>">LogRegister</a></li>
-			</ul>
-			<div id="popup">
-				<table>
-					<tbody>
-						<tr><td>
-							<span style="font-size: auto; color: Tomato;">
-								<i class="fas fa-cogs"></i>
-							</span></td>
-							<td><span style="font-size: auto; color: Dodgerblue;">
-								<a href="./afoolish-os/"><i class="fab fa-android"></i></a>
-							</span></td>
-							<td><span style="font-size: auto;">
-								<i class="fas fa-cloud-upload-alt"></i>
-							</span></td>
-							<td><span style="font-size: auto;">
-                  <a href="<%= root_path %>"><i class="fas fa-search"></i></a>
-							</span></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<script>
-				var btnPopup = document.getElementById('trigger_popup_fricc');
-				var overlay = document.getElementById('popup');
-				var openPopup = false;
-				btnPopup.addEventListener('click',()  => {
-					if(!openPopup){overlay.style.display = 'block';openPopup = true;
-					}else{overlay.style.display ="none"; openPopup = false;}
-				});
-			</script>
-		</header>
-      <%= yield %>
+      <h1><%= Rails.application.config.site[:name] %>  </h1>
+        <a href="https://gnu.org">> GNU</a>
+        <a href="https://lineageos.org">> Lineage OS</a>
+        <a href="https://gnous.eu">> GNOUSEU</a>
+    </header>
+    <%= yield %>
     <footer>
 			<p>Le <a href="https://github.com/mrvxo/fsf-nsi.github.io">code source</a> de ce site est disponible sur GitHub </p>
-			<span style="font-size: 2rem;">
-				<i class="fab fa-creative-commons"></i>
-				<i class="fab fa-creative-commons-by"></i>
-				<i class="fab fa-creative-commons-sa"></i>
-			</span>
+      <p>LICENSE GNU GPL V2</p>
 		</footer>
 
   </body>

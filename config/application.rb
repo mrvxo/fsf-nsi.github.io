@@ -10,9 +10,9 @@ module Qtzctl
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-    config.hosts << "qtzctl.mooo.com"
+    config.hosts << "qtzctl.gnous.eu"
     config.site = {
-      name: 'QTZCTL'
+      name: 'Quetzalcoatl'
     }
     # Configuration for the application, engines, and railties goes here.
     #

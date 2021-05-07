@@ -1,5 +1,18 @@
 <main>
-
-  <label> Pseudo: <%= @user.username %> </label>
-  <label> E-mail: <%= @user.email %></label>
+  <div id="grid">
+    <div>
+      <div>
+        <center>
+          <div id="losange"></div>
+        </center>
+      </div>
+      <table>
+        <tbody>
+          <tr> Pseudo : Email </tr>
+          <td> <label> <%= @user.username %> </label></td>
+          <td> <label> <%= @user.email %> </label> </td>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </main>

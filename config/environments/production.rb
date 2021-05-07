@@ -97,12 +97,12 @@ Rails.application.configure do
   end
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { host: 'http://qtzctl.mooo.com', port: 80}
+  config.action_mailer.default_url_options = { host: 'http://qtzctl.gnous.ei', port: 3000}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => 'localhost',
     :port => 1025,
-    :domain => 'qtzctl.mooo.com'
+    :domain => 'qtzctl.gnous.eu'
   }
 
 

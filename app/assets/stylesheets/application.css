@@ -1,12 +1,15 @@
 *{  color: white; padding: 0; margin: 0; font-family: 'Noto Sans KR', sans-serif;}
 a,p,h1,h2,h3,h4,h5,h6,b,u{color:inherit;}
 a, li { text-decoration: none; list-style: none; list-style-type: none;}
-html {height: 100%;  background: radial-gradient(circle at bottom, navy 0, black 100%); overflow: hidden;} 
+html {
+	height: 100%;  
+	background-color=#222222;
+}
 div{
 	box-sizing: border-box;
 }
-body{
-  background: rgba(128, 0, 128, 0.1) center / 200px 200px round;	
+body {	
+	background-color: #222222;
 	display: grid;
 	height: 100%;
 	grid-template-columns: auto auto 200px;
@@ -15,12 +18,27 @@ body{
 }
 header{display: block;grid-area: header; text-align: center;}
 main{
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		grid-area: main;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	grid-area: main;
 }
+#right-content{
+	width: 60%;
+	padding: 10px;
+	margin : 1%;
+	height: 100%;
+	background-color: #111;
+}
+
+#left-content{
+	width: 37%;
+	height: 100%;
+	padding: 10px;
+	background-color: #111;
+}
+
 .header{
     display: block;
     border-bottom: 2px solid #ccc;
@@ -35,7 +53,6 @@ footer {
 		grid-area: footer;
 		display: flex;
 		flex-direction: column;
-		font-family: 'Commissioner', cursive;
 		padding: 10px;
 		align-items: center;
 }footer a{
@@ -95,6 +112,8 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 	border: none;
 }
 
+/* LOGIN /REGISTER CSS*/
+
 #form_user {
 	display: block;
 	font-size: 16px;
@@ -130,6 +149,8 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
   margin-bottom: 15px;
 }
 
+/* SEARCH ENGINES */
+
 .search-engine{
 	width: 700px;
 }	
@@ -148,6 +169,8 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 		padding: 0px;
 		width: 347px;
 	}
+
+/* GRID */
 
 #grid {
 	background-color: #111;
@@ -183,4 +206,4 @@ a #close-popup{ border-radius: 50%; background-colord: grey; padding: 10px;}
 		left:-50px;
 	}
 
-
+*/
